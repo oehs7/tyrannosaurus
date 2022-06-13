@@ -18,7 +18,7 @@ jobs:
           json=`cat .github/action-options.json`
           USE_SLACK=`echo $(jq -r '.use_slack' <<< "$json")`
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9
       - name: Install build meta-dependencies
